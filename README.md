@@ -5,10 +5,9 @@
 
 When I started the project, like everyone else, I first searched for "push_swap" on Google. The algorithm written by Jamie Dawson in the Medium link I shared below was very clear to me.
 
-https://medium.com/@jamierobertdawson/push-swap-the-least-amount-of-moves-with-two-stacks-d1e76a71789a
+[text](https://medium.com/@jamierobertdawson/push-swap-the-least-amount-of-moves-with-two-stacks-d1e76a71789a)
 
 ![ For this project, we need to choose multiple algorithms, and the research related to this is listed in the sources below. The insertion algorithm that Jamie Dawson chose turned out to be the most applicable one for me.](image.png)
-
 
 # Install
 Clone the push_swap into the directory.
@@ -21,10 +20,31 @@ then you write;
 
 # How can you test it?
 
+If you want to test it your project, you have to follow this steps:
 
+First:
+- Test the program using the checker found in the files.
+- After compiling, run the command below. You can enter random numbers from the link below.
 
+[NUMBER GENERATOR](https://numbergenerator.org/#!numbers=100&low=1&high=100&unique=true&csv=&oddeven=&oddqty=0&sorted=false&addfilters=)
 
+<ARG="<give randomly number>"; <executable file name(./push_swap)> $ARG | ./checker $ARG>
 
+The result must be OK.
+
+<ARG="<give randomly number>"; <executable file name(./push_swap)> $ARG | wc -l>
+
+The result for 100 randomly numbers must be lesser than 700,(mandatory part)
+for 500 randomly numbers must be lesser than 5500.(bonus part)
+
+Second:
+
+Test for memory leak issues in your code.
+For that, i use valgrind. You have to download valgrind to your computer.
+
+<valgrind --leak-check=yes <executable_name> <give_randomly_number>>
+
+ATTENTION! Your code must work with <"3 5 6"> and <6 9 7>.
 
 # THE RULES FOR PROJECT
 You have 2 stacks named a and b.
